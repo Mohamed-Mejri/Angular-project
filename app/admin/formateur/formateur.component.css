@@ -1,0 +1,56 @@
+table {
+  padding: 10px;
+  margin: 50px;
+  margin-top: 50px;
+  width: 80%;
+
+}
+
+  
+  .edit{
+
+    margin-left: 200px;
+
+
+  }
+ 
+  .thaction a{
+
+    margin-left: 220px;
+
+  }
+
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+  }
+
+ .addbutton {
+
+  margin-top: 30px;
+
+
+
+
+  }
+
+ 
+  .scrol{
+
+    height: 300px;
+    overflow: scroll;
+  }
+
+  
+  
+
+  .mat-row:nth-child(even){
+    background-color: #cfd5ea;
+}
+        
+.mat-row:nth-child(odd){
+    background-color: #e9ebf5;
+}
+

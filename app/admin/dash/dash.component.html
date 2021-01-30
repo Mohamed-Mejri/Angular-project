@@ -1,0 +1,204 @@
+
+
+
+    <td width="5px"></td>
+
+    <table style="width: 100%;">
+        
+        <tr style="padding-top: 10px;" >
+
+            <td width="5px"></td>
+
+
+            <td width="40px" height="200px" style="background-color:#ED7D31;">                
+                <div>                                                                  
+                            <table>
+                                
+                                <tr style="padding-top: 10px;" >
+                                    <td >  <img src="assets/sessions.png" class="icon" /> </td>
+                                    <td ><a class="class_number" >{{dash_sessionItems.length}} </a><a>Sessions</a></td>
+                                </tr>
+                            </table>   
+                </div>                          
+            
+            </td>
+
+            <td width="5px"></td>
+
+            <td width="40px" height="200px" style="background-color: #00B050;">                
+                <div>                                                                  
+                            <table>
+                                
+                                <tr style="padding-top: 10px;" >
+                                    <td >  <img src="assets/participants.png" class="icon" /> </td>
+                                    <td ><a class="class_number" > {{dash_participants.length}} </a><a>participants</a></td>
+                                </tr>
+                            </table>   
+                </div>                          
+            
+            </td>
+
+            <td width="5px"></td>
+
+
+            <td width="40px" height="200px" style="background-color: #7030A0;">                
+                <div>                                                                  
+                            <table>
+                                
+                                <tr style="padding-top: 10px;" >
+                                    <td >  <img src="assets/sessions.png" class="icon" /> </td>
+                                    <td ><a class="class_number" >{{dash_formateurs.length}} </a><a>Formateur</a></td>
+                                </tr>
+                            </table>   
+                </div>                          
+            
+            </td>
+
+
+
+
+            <td width="5px"></td>
+
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table style="width: 100%;">
+    
+    <tr  >
+
+        <td width="5px"></td>
+
+
+        <td width="600px" height="200px" >
+
+          <div class="mat-elevation-z8">
+
+            <mat-table style="background-color: #4472c4;" #table [dataSource]="bogusDataSource">
+        
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+        
+           
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="track">
+              <mat-header-cell *matHeaderCellDef> Track </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.track}} </mat-cell>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="count">
+              <mat-header-cell *matHeaderCellDef> Nombre de sessions </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.count}} </mat-cell>
+            </ng-container>
+        
+           
+        
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+          <mat-table #table [dataSource]="dataSource">
+        
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+        
+         
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="track">
+              <mat-header-cell *matHeaderCellDef></mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.track}} </mat-cell>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="count">
+              <mat-header-cell *matHeaderCellDef></mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.count}} </mat-cell>
+            </ng-container>
+        
+           
+        
+            <mat-header-row *matHeaderRowDef="displayedColumns" [style.min-height]="0" ></mat-header-row>
+            <mat-row *matRowDef="let row;  let even = even;  columns: displayedColumns;"  [ngClass]="{gray: even}" ></mat-row>
+          </mat-table>
+        </div>
+        
+
+ 
+
+
+
+        </td>
+        <td width="5px"></td>
+
+        <td width="200px" height="600px">
+
+
+
+
+
+          <div class="mat-elevation-z8">
+    
+            <mat-table style="background-color: #4472c4;" #table [dataSource]="p_bogusDataSource">       
+              <mat-header-cell *matHeaderCellDef> Formateur </mat-header-cell> 
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+            <!-- Name Column -->
+            <ng-container matColumnDef="nom">
+              <mat-header-cell *matHeaderCellDef> TOP </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.nom}} </mat-cell>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="prenom">
+              <mat-header-cell *matHeaderCellDef> Formateur </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.prenom}} </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="p_displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: p_displayedColumns;"></mat-row>
+          </mat-table>
+          <mat-table #table [dataSource]="p_dataSource">
+        
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="nom">
+              <mat-header-cell *matHeaderCellDef></mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.nom}} </mat-cell>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="prenom">
+              <mat-header-cell  *matHeaderCellDef></mat-header-cell>
+              <mat-cell  *matCellDef="let element"> {{element.prenom}} </mat-cell>
+            </ng-container>       
+
+            <mat-header-row *matHeaderRowDef="p_displayedColumns" [style.min-height]="0" ></mat-header-row>
+            <mat-row class="row"  *matRowDef="let row;  let even = even; columns: p_displayedColumns; " [ngClass]="{gray: even}"></mat-row>
+          </mat-table>
+        </div>
+        
+        
+          
+        </td>
+
+        </tr>
+
+        </table>
+
+
+
