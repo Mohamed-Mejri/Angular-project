@@ -1,0 +1,99 @@
+<section>        
+
+<div class="wrapper">
+  <div class="sidebar">
+      <h2>
+        <table style="width: 100%;">
+          <tbody>
+          <tr>
+              <td ><img src="assets/admin.jpg" class="icon_admin" /></td>
+              <td ><a  ><i class="fas fa-project-diagram"></i>Espace Admin</a></td>
+          </tr>    
+          </tbody>
+          </table>
+
+
+
+      </h2>
+      <ul>
+          <li >
+            <table style="width: 100%;" >
+              <tbody>
+              <tr>
+                  <td ><img src="assets/dash.png" class="icon" /></td>
+                  <td  ><a routerLink="./dash" ><i class="fas fa-project-diagram"></i>Dashboard</a></td>
+              </tr>    
+              </tbody>
+              </table>
+            </li>
+
+            <li>
+              <table style="width: 100%;">
+                <tbody>
+                <tr>
+                    <td ><img src="assets/sessions.png" class="icon" /></td>
+                    <td ><a routerLink="./sessions"  routerLinkActive="active" ><i class="fas fa-project-diagram"></i>Sessions</a></td>
+                </tr>    
+                </tbody>
+                </table>
+              </li>
+
+
+              <li>
+                <table style="width: 100%;">
+                  <tbody>
+                  <tr>
+                      <td ><img src="assets/sessions.png" class="icon" /></td>
+                      <td ><a routerLink="./formateur"  routerLinkActive="active" ><i class="fas fa-project-diagram"></i>Formateurs</a></td>
+                  </tr>    
+                  </tbody>
+                  </table>
+                </li>
+         
+          <li>
+            <table style="width: 100%;">
+              <tbody>
+              <tr>
+                  <td ><img src="assets/participants.png" class="icon" /></td>
+                  <td ><a routerLink="./part"  routerLinkActive="active" ><i class="fas fa-project-diagram"></i>Participants</a></td>
+              </tr>    
+              </tbody>
+              </table>
+            </li>
+
+      </ul> 
+
+  </div>
+  <div class="main_content">
+      
+    
+    
+    
+      <div class="header" style="background: #000064;">
+        <table style="width: 20%; float: right;">
+          <tbody>
+          <tr>
+              <td > <a style="float: right;" class="date"><h1>{{myDate |date:'yyyy-MM-dd' }}</h1></a></td>
+              <td stlye="width:auto ;">                <img style="float: right;"src="assets/power.png" class="icon_admin"  onclick="window.close();" /></td>
+             
+          </tr>    
+          </tbody>
+          </table>
+      </div>  
+
+
+
+
+      <router-outlet></router-outlet>
+
+      <div class="info">
+        
+    </div>
+  </div>
+</div>
+</section>        
+
+
+
+
+
